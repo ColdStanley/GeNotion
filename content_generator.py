@@ -1,7 +1,7 @@
 import google.generativeai as genai
-from config import GEMINI_API_KEY
+import streamlit as st
 
-genai.configure(api_key=GEMINI_API_KEY)
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 
 def generate_content(prompt_text):
     try:
