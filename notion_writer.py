@@ -1,5 +1,9 @@
 import requests
-from config import NOTION_API_KEY, DATABASE_ID
+import streamlit as st
+
+NOTION_API_KEY = st.secrets["NOTION_API_KEY"]
+DATABASE_ID = st.secrets["DATABASE_ID"]
+
 
 def write_to_notion(title, content):
     url = "https://api.notion.com/v1/pages"
