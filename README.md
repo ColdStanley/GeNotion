@@ -1,5 +1,114 @@
 # 📝 Genotion: Gemini to Notion Writer
 
+**Genotion** is a lightweight tool that combines Google Gemini with the Notion API. It allows you to input a topic, automatically generate content using Gemini, and write it directly into your Notion database — perfect for content creators, knowledge organizers, and automation enthusiasts.
+
+---
+
+## 🚀 Features
+
+- ✅ **Gemini Content Generation**: Uses Gemini 1.5 Flash model to generate structured natural language  
+- 🧠 **Notion Data Writing**: Automatically populates your Notion database — no copy-paste needed  
+- 📦 **Streamlit UI**: Clean, minimal front-end interface built with Streamlit  
+- 🔐 **Secure Secrets Management**: Supports `.streamlit/secrets.toml` or Streamlit Cloud's secret manager  
+- ☁️ **Cloud Deployable**: Easily hosted on [Streamlit Cloud](https://streamlit.io/cloud)
+
+---
+
+## 🌐 Try It Online
+
+👉 [Access the deployed version](https://gemini-to-notion.streamlit.app)
+
+---
+
+## 🧩 Tech Stack
+
+- Python 3.9+
+- Streamlit
+- Google Generative AI (`google-generativeai`)
+- Notion API (`requests`)
+
+---
+
+## ⚙️ Run Locally
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/ColdStanley/GeNotion.git
+cd GeNotion
+```
+
+### 2️⃣ Install Dependencies, 3️⃣ Configure API Keys, and 4️⃣ Launch the App
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Create a secrets file
+mkdir -p .streamlit
+touch .streamlit/secrets.toml
+
+# Open secrets.toml and add the following:
+# (you can use any text editor, e.g., nano, code, or open it manually)
+# nano .streamlit/secrets.toml
+
+# Paste the following content inside:
+# ---------------------------------------
+# GEMINI_API_KEY = "your-gemini-key"
+# NOTION_API_KEY = "your-notion-key"
+# DATABASE_ID = "your-notion-database-id"
+# ---------------------------------------
+
+# Launch the app
+streamlit run app.py
+```
+
+---
+
+## ☁️ Deploy to Streamlit Cloud
+
+1. Fork or push this repo to your GitHub account  
+2. Visit [Streamlit Cloud](https://streamlit.io/cloud)  
+3. Click `New app`, select your repo and branch  
+4. Set `app.py` as the main file  
+5. Go to “Secrets” and add:
+
+```toml
+GEMINI_API_KEY = "your-gemini-key"
+NOTION_API_KEY = "your-notion-key"
+DATABASE_ID = "your-notion-database-id"
+```
+
+---
+
+## 📌 Sample Screenshots
+
+**Main interface:**  
+![Screenshot1](./01.png)
+
+**After content is successfully written to Notion:**  
+![Screenshot2](./02.png)
+
+---
+
+## 🧭 Future Plans
+
+- [ ] Support switching between multiple models (Gemini Pro, Claude, GPT, etc.)  
+- [ ] Support dynamic Notion property selection  
+- [ ] Add content templates  
+- [ ] Integrate OpenAI Whisper or speech-to-text features  
+
+---
+
+## 📄 License
+
+MIT © 2025 [@ColdStanley](https://github.com/ColdStanley)
+
+
+
+
+# 📝 Genotion: Gemini to Notion Writer
+
 Genotion 是一个结合 Google Gemini 与 Notion API 的轻量级工具，可让你输入一个主题，自动生成内容并一键写入指定的 Notion 数据库。适合内容创作者、知识整理者和自动化工作流爱好者使用。
 
 ---
