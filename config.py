@@ -1,5 +1,0 @@
-import streamlit as st
-
-NOTION_API_KEY = "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"
-DATABASE_ID = "2028ebc783348014a5f0dc2b1a43333e"
-GEMINI_API_KEY = "AIzaSyAuWH_NGE2gqoh98wo7zWhxS9iqf4aDAAQ"
